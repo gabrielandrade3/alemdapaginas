@@ -1,0 +1,87 @@
+body {
+    font-family: 'Garamond', serif;
+    background: url('img/img5.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95));
+    border-radius: 15px; /* Reduzido o raio da borda */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais sutil */
+    padding: 30px; /* Reduzido o padding */
+    width: 350px; /* Reduzido a largura do container */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    color: #6A4A3B;
+    margin-bottom: 25px; /* Reduzido o espaçamento */
+    border-bottom: 3px ridge #D2B48C; /* Borda mais fina */
+    padding-bottom: 15px; /* Reduzido o padding */
+    font-size: 24px; /* Reduzido o tamanho da fonte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 28px); /* Ajustado para o padding menor */
+    padding: 10px; /* Reduzido o padding */
+    margin: 10px 0; /* Reduzido o espaçamento */
+    border: 2px inset #D2B48C; /* Borda mais fina */
+    border-radius: 8px; /* Reduzido o raio da borda */
+    box-sizing: border-box;
+    font-size: 14px; /* Reduzido o tamanho da fonte */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    background: linear-gradient(to right, #8B4513, #A0522D);
+    color: white;
+    padding: 12px 24px; /* Reduzido o padding */
+    border: none;
+    border-radius: 8px; /* Reduzido o raio da borda */
+    cursor: pointer;
+    font-size: 16px; /* Reduzido o tamanho da fonte */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais sutil */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+input:focus {
+    border-color: #A0522D;
+    outline: none;
+    box-shadow: 0 0 6px rgba(160, 82, 45, 0.5);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -30px; /* Ajustado a posição */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Reduzido o tamanho */
+    height: 120px; /* Reduzido o tamanho */
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Ajustado a posição */
+    right: 15px; /* Ajustado a posição */
+    width: 50px; /* Reduzido o tamanho */
+    height: 50px; /* Reduzido o tamanho */
+    opacity: 0.7;
+}
