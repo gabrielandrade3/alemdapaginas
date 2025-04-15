@@ -11,12 +11,29 @@ CREATE TABLE usuarios (
     genero ENUM('male', 'female', 'other') NOT NULL
 );
 
-INSERT INTO usuarios (email, senha) VALUES ('teste@email.com', '12345');
-SELECT * FROM usuarios;
+CREATE TABLE generos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100)
+);
+CREATE TABLE livros (
+    id_livro INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(200),
+    autor VARCHAR(150),
+    descricao TEXT,
+    capa_url VARCHAR(255),
+    arquivo_url VARCHAR(255), -- link para download ou leitura (nao teremos)
+    data_publicacao DATE,
+    genero_id INT,
+    FOREIGN KEY (genero_id) REFERENCES generos(id)
+);
 
-
-SELECT * FROM usuarios WHERE email = 'teste@email.com';
-
-DROP TABLE usuarios;
-
-DELETE FROM usuarios where id = 3;
+CREATE TABLE resenhas (
+    id_resenha INT AUTO_INCREMENT PRIMARY KEY,
+    livro_id INT NOT NULL,
+    usuario_id INT NOT NULL,
+    comentario TEXT,
+    nota INT CHECK (nota >= 1 AND nota <= 5),
+    data_resenha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (livro_id) REFERENCES livros(id_livro),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
