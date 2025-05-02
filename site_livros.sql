@@ -1,0 +1,10 @@
+CREATE DATABASE site_livros;
+USE site_livros;
+
+CREATE TABLE resenhas (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome_usuario VARCHAR(300) NOT NULL,
+titulo_livro VARCHAR(300) NOT NULL,
+resenha TEXT NOT NULL,
+data_postagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
