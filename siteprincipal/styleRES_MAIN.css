@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #6b573d;
+    --secondary-color: #cdbba4;
+    --accent-color: #c4a77e;
+    --light-bg: #fffdf9;
+    --card-bg: #ffffff;
+    --text-color: #4a3f2c;
+    --text-light: #b1a794;
+    --border-color: #e9e4d8;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --button-submit: #5a4834;
+    --button-hover: #3e3220;
+    --font-main: 'Cormorant Garamond', serif;
+    --font-special: 'Great Vibes', cursive;
+    --font-secondary: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--light-bg);
+    background-image: url('imgMAIN/imgMAIN4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.review-form {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.review-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #dbc9a9, var(--accent-color), #dbc9a9);
+}
+
+.review-form h2 {
+    font-family: var(--font-special);
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.review-form p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.review-form h3 {
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.review-form h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.review-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-form label {
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: -10px;
+}
+
+.review-form select,
+.review-form textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+    background-color: var(--card-bg);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.review-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236b573d'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+.review-form select:focus,
+.review-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(196, 167, 126, 0.3);
+}
+
+.review-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.review-form button[type="submit"] {
+    background-color: var(--button-submit);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-family: var(--font-main);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-form button[type="submit"]:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para as estrelas no select */
+.review-form select[name="nota"] option {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    padding: 8px;
+}
+
+/* Botão de voltar */
+.botao-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-size: 1.5em;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.botao-voltar:hover {
+    background-color: #9c8747;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .review-form {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .review-form h2 {
+        font-size: 2.2rem;
+    }
+    
+    .review-form h3 {
+        font-size: 1.5rem;
+    }
+}

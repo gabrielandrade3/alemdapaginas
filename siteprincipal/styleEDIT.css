@@ -1,0 +1,232 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+/* Estilos Gerais */
+body {
+    background-color: #ffffff;
+    background-image: url('imgMAIN/imgMAIN2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #4a3f2c;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    border: 1px solid #e9e4d8;
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #dbc9a9, #e8d8be, #dbc9a9);
+}
+
+/* Título da Página */
+h2 {
+    color: #6b573d;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c4a77e, transparent);
+}
+
+/* Formulário */
+form {
+    padding: 20px 0;
+}
+
+/* Campos do Formulário */
+.form-label {
+    font-weight: 600;
+    color: #5a4834;
+    margin-bottom: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+}
+
+.form-control, .form-select {
+    background-color: #fff;
+    border: 1px solid #e0d6c5;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #4a3f2c;
+    transition: all 0.3s ease;
+    margin-bottom: 1.2rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #c4a77e;
+    box-shadow: 0 0 0 0.25rem rgba(196, 167, 126, 0.25);
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Pré-visualização da Capa */
+img[alt="Capa Atual"] {
+    border: 1px solid #e0d6c5;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: block;
+    margin-top: 10px;
+}
+
+img[alt="Capa Atual"]:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Botão Ver Arquivo */
+.btn-outline-primary {
+    border-color: #c4a77e;
+    color: #6b573d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #c4a77e;
+    border-color: #c4a77e;
+    color: white;
+}
+
+/* Botões */
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    font-size: 0.95rem;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #6b573d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a4834;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #cdbba4;
+    color: #3e3220;
+}
+
+.btn-secondary:hover {
+    background-color: #c4a77e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* Campos de Arquivo */
+input[type="file"] {
+    padding: 8px;
+    background-color: #f9f7f2;
+    border: 1px dashed #cdbba4;
+    border-radius: 6px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #cdbba4;
+    color: #3e3220;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #c4a77e;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-control, .form-select {
+        padding: 10px 12px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

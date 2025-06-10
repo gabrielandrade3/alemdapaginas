@@ -1,0 +1,178 @@
+/* Estilos gerais */
+body {
+    background-color: #f5f1e6; /* Cor de papel envelhecido */
+    font-family: 'Georgia', serif;
+    color: #3a3226;
+    background-image: url('imgMAIN/imgMAIN1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Container principal */
+.container {
+    background-color: rgba(255, 253, 245, 0.92);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #d8c9b5;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #8b6b46, #d4a76a, #8b6b46);
+}
+
+/* Título */
+h2 {
+    color: #5d4b36;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px !important;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8b6b46, transparent);
+}
+
+/* Formulário */
+.form-label {
+    font-weight: 600;
+    color: #5d4b36;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    background-color: #fffdf5;
+    border: 1px solid #d8c9b5;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: #3a3226;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #fffdf5;
+    border-color: #8b6b46;
+    box-shadow: 0 0 0 0.25rem rgba(139, 107, 70, 0.25);
+    color: #3a3226;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Botão de saída */
+.btn-danger {
+    background-color: #8b6b46;
+    border-color: #7a5d3d;
+    padding: 10px 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #7a5d3d;
+    border-color: #6a5136;
+    transform: scale(1.05);
+}
+
+/* Botão de submit */
+.btn-primary {
+    background-color: #5d4b36;
+    border-color: #4a3c2b;
+    padding: 10px 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #4a3c2b;
+    border-color: #3a3226;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones */
+.fas {
+    font-size: 1.2rem;
+}
+
+/* Efeitos especiais para os campos de arquivo */
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #d8c9b5;
+    border: 1px solid #c5b7a2;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: all 0.2s;
+    color: #5d4b36;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #c5b7a2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Decoração temática */
+.book-decoration {
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Adicionando alguns detalhes de livro */
+.container::after {
+    content: "✎";
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #d8c9b5;
+    opacity: 0.5;
+}

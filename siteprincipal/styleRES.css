@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #cdbba4;
+    --accent-color: #c4a77e;
+    --light-bg: #fffdf9;
+    --card-bg: #ffffff;
+    --text-color: #4a3f2c;
+    --text-light: #b1a794;
+    --border-color: #e9e4d8;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --star-filled: #c4a77e;
+    --star-empty: #e0d6c5;
+    --button-edit: #5a4834;
+    --button-delete: #d9534f;
+    --button-hover-edit: #3e3220;
+    --button-hover-delete: #c9302c;
+    --font-main: 'Cormorant Garamond', serif;
+    --font-secondary: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--light-bg);
+    background-image: url('imgMAIN/imgMAIN4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 70px auto 50px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #dbc9a9, var(--accent-color), #dbc9a9);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    font-family: var(--font-main);
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.resenha {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resenha:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    background-color: #fdf8f1;
+}
+
+.resenha::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #dbc9a9, var(--accent-color), #dbc9a9);
+}
+
+.resenha img {
+    width: 140px;
+    height: 200px;
+    margin-right: 25px;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px var(--shadow-color);
+    object-fit: cover;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.resenha:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo {
+    flex: 1;
+}
+
+.conteudo h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.8em;
+    font-family: var(--font-main);
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.conteudo p {
+    margin: 10px 0;
+    line-height: 1.7;
+    color: var(--text-color);
+    font-size: 1.05em;
+}
+
+.conteudo em {
+    color: var(--text-light);
+    font-size: 0.95em;
+    display: block;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.estrela {
+    color: var(--star-filled);
+    font-size: 1.4em;
+    margin-right: 4px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.estrela:hover {
+    transform: scale(1.2);
+}
+
+.estrela:last-child {
+    margin-right: 0;
+}
+
+.botoes {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.botao {
+    min-width: 110px;
+    padding: 10px 18px;
+    color: white !important; /* Garante que o texto permaneça branco */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: var(--font-secondary);
+    font-size: 0.95em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* CORREÇÃO: Botão Editar agora visível e estilizado corretamente */
+.botao.editar {
+    background-color: #5a4834 !important;
+    border: 1px solid #3e3220 !important;
+    color: white !important;
+}
+
+.botao.editar:hover {
+    background-color: #3e3220 !important;
+}
+
+.botao.excluir {
+    background-color: var(--button-delete) !important;
+    border: 1px solid var(--button-hover-delete) !important;
+}
+
+.botao.excluir:hover {
+    background-color: var(--button-hover-delete) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Efeito de página antiga */
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(227, 214, 188, 0.1) 0%,
+        rgba(227, 214, 188, 0) 10%,
+        rgba(227, 214, 188, 0) 90%,
+        rgba(227, 214, 188, 0.1) 100%
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .container {
+        padding: 25px;
+        margin-top: 50px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .resenha {
+        flex-direction: column;
+    }
+    
+    .resenha img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .botoes {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .botao {
+        width: 100%;
+    }
+}
+
+.mensagem-vazia {
+    text-align: center;
+    font-size: 1.2em;
+    color: #6b573d; /* Cor do tema */
+    margin: 40px 0;
+    font-style: italic;
+    padding: 20px;
+    background-color: #f8f4e9; /* Fundo claro */
+    border-radius: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão de voltar fixo */
+.botao-voltar {
+    top: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #000000; /* Vermelho igual ao exemplo */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-size: 1.5em;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.botao-voltar:hover {
+    background-color: #978044; /* Vermelho mais escuro no hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: white;
+}
+
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Helvetica+Neue:wght@400;500;600&display=swap');
