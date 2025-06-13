@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #faf3e0;
+  background-image: url("http://www.transparenttextures.com/patterns/asfalt-dark.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-wrapper {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+header h4 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #a87300;
+    margin: 1rem 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+h6{
+  font-family: sans-serif, cursive;
+  color: #8d691c
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider-content {
+    display: flex;
+    width: 1500%; /* 15 slides (100% * 15) */
+    transition: margin 0.5s ease-in-out;
+}
+
+.slide-box {
+    width: 100%; /* Cada slide ocupa 100% do contêiner */
+    padding: 10px;
+}
+
+.slide-box img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin: 0 auto;
+}
+
+.sinopse {
+    margin-top: 12px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 0.95rem;
+    color: #444;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.sinopse::before {
+    content: "Sinopse 📖:";
+    display: block;
+    font-weight: bold;
+    color: #ddb96d;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.nav-manual {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.manual-btn {
+    border: 2px solid #e4ae61;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 4px;
+    transition: background 0.3s;
+}
+
+.manual-btn:hover {
+    background-color: #e4ae61;
+}
+
+/* Controle de cada slide (15 no total) */
+#radio1:checked ~ .slider-content { margin-left: 0%; }
+#radio2:checked ~ .slider-content { margin-left: -100%; }
+#radio3:checked ~ .slider-content { margin-left: -200%; }
+#radio4:checked ~ .slider-content { margin-left: -300%; }
+#radio5:checked ~ .slider-content { margin-left: -400%; }
+#radio6:checked ~ .slider-content { margin-left: -500%; }
+#radio7:checked ~ .slider-content { margin-left: -600%; }
+#radio8:checked ~ .slider-content { margin-left: -700%; }
+#radio9:checked ~ .slider-content { margin-left: -800%; }
+#radio10:checked ~ .slider-content { margin-left: -900%; }
+#radio11:checked ~ .slider-content { margin-left: -1000%; }
+#radio12:checked ~ .slider-content { margin-left: -1100%; }
+#radio13:checked ~ .slider-content { margin-left: -1200%; }
+#radio14:checked ~ .slider-content { margin-left: -1300%; }
+#radio15:checked ~ .slider-content { margin-left: -1400%; }
+
+.nav-arrow.left {
+    left: 10px;
+}
+
+.nav-arrow.right {
+    right: 10px;
+}
+
+.nav-arrow:hover {
+    background: #e4ae61;
+    color: #fff;
+}
+
+footer {
+    margin: 40px 0;
+    font-size: 0.9em;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .slide-box {
+        width: 100%;
+    }
+
+    .slide-box img {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .sinopse {
+        font-size: 0.9rem;
+    }
+
+    .sinopse::before {
+        font-size: 0.95rem;
+    }
+}
