@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #faf3e0;
-  background-image: url("http://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-image: url(imgens/fundo.png);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 header h4 {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
-    color: #a87300;
+    color: #473203;
     margin: 1rem 0;
 }
 
@@ -32,7 +32,7 @@ header h2 {
 
 h6{
   font-family: sans-serif, cursive;
-  color: #8d691c
+  color: #d6a947
 }
 
 .slider {
@@ -97,7 +97,7 @@ h6{
 }
 
 .manual-btn {
-    border: 2px solid #e4ae61;
+    border: 2px solid #473203;
     padding: 6px;
     border-radius: 50%;
     cursor: pointer;
@@ -106,7 +106,7 @@ h6{
 }
 
 .manual-btn:hover {
-    background-color: #e4ae61;
+    background-color: #684906;
 }
 
 /* Controle de cada slide (15 no total) */
@@ -171,3 +171,4 @@ footer {
         font-size: 0.95rem;
     }
 }
+
