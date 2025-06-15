@@ -72,20 +72,6 @@ session_start();
             <h2>Bem-vindo ao Além das Páginas</h2>
             <p>Olá, leitores e leitoras! Sejam bem-vindos ao meu mundo, que agora também é o seu novo mundinho...</p>
         </section>
-
-        <h4>Livros em destaques</h4>
-        <section>
-            <div class="carousel">
-                <img src="imagens/a troca.jpg" alt="A Troca">
-                <img src="imagens/Manual-de-assassinato-G.jpg" alt="Manual de Assassinato">
-                <img src="imagens/tptc.jpg" alt="TPTC">
-            </div>
-        </section>
-
-        <div class="cta-buttons">
-            <a href="dicas-de-livros.html" class="cta-button">Veja as Dicas de Livros</a>
-            <a href="resenhas.html" class="cta-button">Leia as Resenhas</a>
-        </div>
     </main>
 
     <footer>
