@@ -1,0 +1,2 @@
+MUDE O NOME DA PASTA PARA "tcclogin" AO FAZER TESTES.
+MUDE A SENHA EM "conexaobanco.php" == ESCOLA - jk123456 / CASA - em branco.

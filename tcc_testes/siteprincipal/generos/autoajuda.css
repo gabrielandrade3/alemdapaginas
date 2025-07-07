@@ -1,0 +1,191 @@
+/* Estilos Gerais - Tema Motivacional */
+:root {
+  --primary: #4285F4;
+  --secondary: #34A853;
+  --accent: #EA4335;
+  --light: #F8F9FA;
+  --dark: #202124;
+  --text: #3C4043;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Seção de Autoajuda */
+#autoajuda {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+#autoajuda h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#autoajuda h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  border-radius: 2px;
+}
+
+/* Lista de Livros */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+/* Card de Livro */
+.livro {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8f0fe;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.livro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(66, 133, 244, 0.15);
+}
+
+.livro img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.livro:hover img {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.livro h3 {
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.livro p {
+  margin: 8px 0;
+  color: #5f6368;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.livro p strong {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+/* Botão Inspirador */
+.livro button {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  width: 100%;
+  max-width: 180px;
+  box-shadow: 0 4px 8px rgba(66, 133, 244, 0.2);
+  text-transform: uppercase;
+}
+
+.livro button:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(66, 133, 244, 0.3);
+}
+
+/* Mensagem quando não há livros */
+.mensagem {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 60px 0;
+  color: var(--primary);
+  font-style: italic;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.mensagem::before {
+  content: '💡';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  opacity: 0.2;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #autoajuda {
+    padding: 30px;
+  }
+  
+  #autoajuda h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+  
+  #autoajuda {
+    padding: 25px 20px;
+  }
+  
+  #autoajuda h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap');

@@ -1,0 +1,85 @@
+/* ficientifica.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0f1c;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: radial-gradient(circle at top, #1a1f2b, #0a0f1c);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    margin-top: 30px;
+    color: #00ffe7;
+    text-shadow: 0 0 10px #00ffe7, 0 0 20px #00b3a4;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.livro {
+    background: linear-gradient(145deg, #1a1f2b, #10141f);
+    border: 1px solid #1e90ff;
+    border-radius: 10px;
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 231, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.livro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 231, 0.4);
+}
+
+.livro img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.4);
+}
+
+.livro h3 {
+    font-size: 1.2em;
+    color: #c3faff;
+    margin-bottom: 5px;
+}
+
+.livro p {
+    font-size: 0.9em;
+    color: #b0cbe8;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #0097a7;
+    box-shadow: 0 0 10px #00bcd4;
+}
+
+.mensagem {
+    text-align: center;
+    font-size: 1.1em;
+    color: #888;
+    margin-top: 50px;
+}
