@@ -1,0 +1,18 @@
+ <?php
+    include 'conexao.php';
+     $nome_usuario = $_POST['nome_usuario'];
+     $titulo_livro = $_POST['titulo_livro'];
+     $resenha = $_POST['resenha'];
+     $data_postagem = date('Y-m-d H:i:s');
+
+     $sql = "INSERT INTO resenhas (nome_usuario, titulo_livro, resenha, data_postagem)
+     VALUES ('$nome_usuario', '$titulo_livro', '$resenha', '$data_postagem')";
+
+     if ($conn->query($sql) === TRUE) {
+        echo "Resenha enviada com sucesso!";
+     } else {
+        echo "Erro : " . $sql . "<br>" . $conn->error;
+     }
+
+     $conn->close();
+    ?>
