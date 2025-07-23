@@ -1,0 +1,80 @@
+<main>
+    <!--Formulário para Submissão de Resenhas -->
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Serifadas+Elegantes:wght@400;700&display=swap" rel="stylesheet">
+     <style>
+        /* Estilo das fontes */
+        body {
+            font-family: 'Arial', sans-serif; /* Fonte padrão para o corpo do texto */
+            background-image: url(imagens/capa.jpg); /* Coloque o caminho correto da imagem */
+            background-repeat: no-repeat;
+            background-size: 100%; /* Faz com que a imagem cubra toda a tela */
+            background-position: center;
+        }
+
+        h2 {
+            font-family: 'Serifadas Elegantes', serif;
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            font-family: 'Verdana', sans-serif; /* dando as boas vindas paras os usuarios na seção de resenhas */
+            font-size: 16px;
+            color: #555;
+        }
+
+        h3 {
+            font-family: 'Tahoma', sans-serif;
+            font-size: 20px;
+            color: #222;
+        }
+
+        /* Estilo do formulário */
+        .review-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+     <div class="review-form">
+        <main>
+            <h2>Bem-vindo à seção de resenhas, onde você pode compartilhar todos os sentimentos que experimentou durante sua leitura.</h2>
+            <p>Parabéns por concluir sua leitura! Que tal compartilhar sua experiência literária? Divida aqui os momentos mais marcantes ou até mesmo os mais sutis. Não deixe apenas sua resenha, mas cada pedacinho dessa jornada. Sua experiência pode inspirar e encorajar outras pessoas a embarcarem nesse mundo incrível!</p>
+        </main>
+        <h3>Adicione sua Resenha</h3>
+        <form action="processar_resenha.php" method="POST">
+    <input type="text" name="book_title" placeholder="Título do Livro" required><br>
+    <textarea name="review_text" rows="5" placeholder="Sua resenha aqui..." required></textarea><br>
+    <button type="submit">Enviar Resenha</button>
+</form>
+</main>
