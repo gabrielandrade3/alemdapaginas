@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Além das Pág.</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&family=Dancing+Script&family=Serifadas+Elegantes:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Dancing+Script&family=Diplomata&family=Great+Vibes&family=Jim+Nightshade&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Meie+Script&family=Playwrite+AU+NSW:wght@100..400&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styleprincipal.css"> <!-- Importa o CSS separado -->
@@ -74,23 +74,203 @@ session_start();
 
     <main>
         <section>
-            <h2>Bem-vindo ao Além das Páginas</h2>
-            <p>Olá, leitores e leitoras! Sejam bem-vindos ao meu mundo, que agora também é o seu novo mundinho...</p>
+            <h2>📖 Bem-vindo ao seu novo refúgio literário</h2>
+            <br>
+            <p>Olá, leitoras e leitores.</p>
+            <p>Você acaba de cruzar a fronteira entre o real e o imaginário. Este espaço não é apenas sobre livros — é sobre experiências. Aqui, as histórias não se leem apenas com os olhos, mas se vivem com a alma.
+
+              Cada clique é um passo rumo ao seu próprio universo literário.</p>
+
+        <h4>Por aqui, você vai encontrar:</h4>
+
+<p>✨ Quiz criado para ajudar quem ainda não tem o hábito de ler a descobrir qual gênero literário combina mais com seu jeito — e, para quem já lê, uma chance de sair da zona de conforto e explorar novas possibilidades.</p>
+<p>✨ Curiosidades literárias com explicações simples sobre expressões comuns entre leitores.</p>
+<p>✨ Dicas de leitura para iniciantes ou curiosos que querem mergulhar nesse universo e não sabem por onde começar.</p>
+<p>✨ PDFs gratuitos de diversos gêneros — do romance ao suspense.</p>
+<p>✨ Resenhas literárias com linguagem acessível, para você entender a essência de cada livro antes de mergulhar na leitura.</p>
+<br>
+<p>Esse site é um convite para virar páginas, encontrar sentido — e também se perder nas entrelinhas.</p> 
+
+<p>Aqui, você vai sentir o cheiro das páginas, ouvir os sussurros dos personagens e caminhar ao lado deles em jornadas inesquecíveis.
+</p>
+<p>Ninguém precisa saber tudo sobre literatura. Basta ter curiosidade e vontade de explorar — o resto, a gente constrói junto.
+</p>
+<br>
+<p>📚 Entre, fique à vontade e comece a escrever sua própria jornada como leitor.</p>
         </section>
 
-        <h4>Livros em destaques</h4>
-        <section>
-            <div class="carousel">
-                <img src="imagens/a troca.jpg" alt="A Troca">
-                <img src="imagens/Manual-de-assassinato-G.jpg" alt="Manual de Assassinato">
-                <img src="imagens/tptc.jpg" alt="TPTC">
-            </div>
-        </section>
+    <section class="literary-terms">
+  <h1>Você já ouviu falar em...</h1>
 
-        <div class="cta-buttons">
-            <a href="dicas-de-livros.html" class="cta-button">Veja as Dicas de Livros</a>
-            <a href="resenhas.html" class="cta-button">Leia as Resenhas</a>
-        </div>
+  <div class="term">
+    <input type="checkbox" id="ressaca-literaria">
+    <label for="ressaca-literaria">Ressaca literária</label>
+    <p>
+      É aquele sentimento de vazio que aparece depois de terminar um livro muito marcante. Você se envolve tanto 
+      com a história, os personagens e o universo narrativo, que sente que nada mais vai superar aquilo. Por isso, 
+      é difícil começar outra leitura logo em seguida. Pode durar dias ou até semanas. Durante a ressaca, 
+      leitores geralmente ficam pensando no enredo, revivendo cenas ou relendo trechos favoritos. 
+      É um sinal de que o livro realmente impactou você. Embora incômoda, é uma experiência quase universal entre 
+      leitores assíduos. Um bom livro pode curar essa fase.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="plot-twist">
+    <label for="plot-twist">Plot twist</label>
+    <p>
+      É uma reviravolta inesperada no enredo, geralmente no momento em que o leitor menos espera. Esse recurso 
+      é usado para surpreender, chocar ou mudar totalmente a direção da história. Pode revelar que um personagem
+       era vilão, que algo visto como verdade era mentira ou que tudo foi um sonho, por exemplo. Um bom plot twist
+        muda a perspectiva do leitor sobre tudo que leu até ali. Para funcionar bem, ele precisa fazer sentido 
+        dentro da narrativa e não parecer forçado. Um plot twist bem construído pode transformar um livro comum
+         em inesquecível.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="prologo">
+    <label for="prologo">Prólogo</label>
+    <p>
+      O prólogo é a introdução da história, uma parte inicial que ocorre antes do evento principal do livro. 
+      Ele pode servir para apresentar um contexto importante, uma cena do passado, ou até um mistério que será 
+      desenvolvido depois. Nem toda história tem prólogo, mas quando tem, ele ajuda a preparar o leitor para o que 
+      virá, estabelecendo o tom ou o cenário. Muitas vezes, o prólogo funciona para criar curiosidade e prender o 
+      interesse logo no começo da leitura.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="epilogo">
+    <label for="epilogo">Epílogo</label>
+    <p>
+      O epílogo é a parte final do livro, que ocorre depois dos eventos principais da história. Ele mostra o que 
+      aconteceu com os personagens depois do clímax, resolvendo pontas soltas ou dando uma visão do futuro. Serve 
+      para dar uma sensação de fechamento para o leitor e pode ser usado para sugerir novas histórias ou continuar 
+      a narrativa em uma sequência. Diferente do final tradicional, o epílogo traz detalhes adicionais que 
+      enriquecem a conclusão.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="antagonista">
+    <label for="antagonista">Antagonista</label>
+    <p>
+      O antagonista é o personagem que cria o conflito principal da história ao se opor ao protagonista. 
+      Ele pode ser um vilão, uma força da natureza, ou até mesmo uma ideia contrária. Seu papel é fundamental 
+      para gerar tensão e drama, pois é a partir dessa oposição que a trama se desenvolve. Um antagonista bem 
+      construído torna a história mais rica, já que desafia o herói e testa suas habilidades, crenças e motivações.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="enemies-to-lovers">
+    <label for="enemies-to-lovers">Enemies to Lovers</label>
+    <p>
+      É um trope narrativo muito popular em romances, onde dois personagens que começam se odiando profundamente 
+      acabam se apaixonando. Essa dinâmica cria muita tensão e conflito emocional, já que o ódio inicial esconde 
+      sentimentos mais profundos que vão se revelar ao longo da história. A transição do antagonismo para o amor 
+      proporciona momentos intensos, engraçados e emocionantes para o leitor.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="friends-to-lovers">
+    <label for="friends-to-lovers">Friends to Lovers</label>
+    <p>
+      Neste trope, dois amigos de longa data percebem que seus sentimentos ultrapassam a amizade e se apaixonam. 
+      A história geralmente foca no desenvolvimento dessa descoberta e na adaptação para essa nova relação. É um 
+      tema querido porque traz uma sensação de segurança e confiança pré-existente, além de mostrar o valor da 
+      amizade como base para o amor.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="grumpy-sunshine">
+    <label for="grumpy-sunshine">Grumpy Sunshine</label>
+    <p>
+      Este trope apresenta dois personagens com personalidades opostas: um é rabugento, mal-humorado (grumpy) e o 
+      outro é alegre, otimista e cheio de energia (sunshine). A interação entre esses dois cria um contraste 
+      divertido e muitas vezes comovente, pois cada um influencia e transforma o outro, resultando em crescimento 
+      pessoal e um relacionamento especial.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="chosen-one">
+    <label for="chosen-one">Chosen One</label>
+    <p>
+      É o personagem principal que foi escolhido ou destinado a cumprir uma missão importante, muitas vezes para 
+      salvar o mundo ou mudar o destino. Esse arquétipo é comum em histórias de fantasia e aventura. Geralmente, 
+      o escolhido enfrenta grandes desafios e precisa superar dificuldades para alcançar seu propósito, 
+      muitas vezes descobrindo sua verdadeira força e identidade ao longo da jornada.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="slow-burn">
+    <label for="slow-burn">Slow Burn</label>
+    <p>
+      Slow burn é um tipo de relacionamento romântico que se desenvolve lentamente, capítulo após capítulo, com 
+      muita tensão, olhares, trocas de palavras, mas sem pressa. A construção cuidadosa faz o momento da união 
+      final ser muito mais impactante, pois o leitor se envolve profundamente na evolução dos personagens e 
+      seus sentimentos. É um dos estilos favoritos para quem gosta de romance mais realista e emocional.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="triangulo-amoroso">
+    <label for="triangulo-amoroso">Triângulo amoroso</label>
+    <p>
+      O triângulo amoroso envolve três personagens onde dois disputam o amor de um terceiro. Esse tipo de 
+      conflito cria muita tensão, drama e dilemas emocionais. Os personagens precisam lidar com ciúmes, escolhas 
+      difíceis e sentimentos contraditórios. É um recurso clássico que gera interesse e mantém o leitor na 
+      expectativa sobre quem o protagonista vai escolher no final.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="fake-dating">
+    <label for="fake-dating">Fake dating</label>
+    <p>
+      Fake dating é um trope onde dois personagens fingem estar em um relacionamento por alguma razão 
+      prática — para enganar outras pessoas, ganhar vantagem, ou resolver um problema. Porém, essa farsa 
+      costuma evoluir para um romance verdadeiro, com muita química, descobertas e momentos engraçados. 
+      É um enredo divertido e muito popular em romances contemporâneos.
+    </p>
+  </div>
+
+  <div class="term">
+    <input type="checkbox" id="dual-pov">
+    <label for="dual-pov">Dual POV (Ponto de vista duplo)</label>
+    <p>
+      É quando a narrativa alterna entre dois protagonistas — geralmente em romances — mostrando a história 
+      sob a perspectiva de cada um, em capítulos intercalados. Isso ajuda o leitor a entender os sentimentos, 
+      pensamentos e motivações dos dois personagens de forma mais profunda, criando uma conexão maior e uma visão
+       mais completa dos eventos.
+    </p>
+  </div>
+</section>
+<br><br><br>
+  
+<section>
+    <div class="quiz">  
+    <p>Chegou a hora de atravessar o portal. Qual gênero vai conquistar seu coração? </p>
+    <h4>Aventura mágica, romance cheio de charme ou suspense que prende? Venha descobrir!</h4>
+
+    <br><br><br>
+<iframe 
+    src="https://quiz-de-g-nero--averagegrass2866494.on.websim.ai/?v=17" 
+    width="100%" 
+    height="1500" 
+    style="border:none;">
+</iframe>
+</div>
+  
+</section>   
+
+
+       
     </main>
 
     <footer>
