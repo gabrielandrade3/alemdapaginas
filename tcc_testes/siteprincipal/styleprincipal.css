@@ -3,47 +3,86 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #faeadc;
 }
 
+/*  HEADER  */
 header {
-    background: #ffffff;
-    color: #000000;
+    background: #faeadc;
+    color: #000;
     padding: 1rem;
     text-align: center;
     font-size: 20px;
 }
+
 header h1 {
-    font-size: 80px; /* Ou o tamanho que você quiser */
-    font-family: 'Great Vibes', cursive; /* Ou qualquer outra fonte */
+    font-size: 80px;
+    font-family: 'Great Vibes', cursive;
 }
 
-
-header nav ul {
-    list-style: none;
-    padding: 0;
+/*  NAVBAR (BOOTSTRAP)  */
+.bg-body-tertiary {
+    background-color: #faeadc !important;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: #000000;
+.navbar .nav-link {
+    color: #000 !important;
+    font-family: 'Libertinus Sans', sans-serif;
     text-decoration: none;
 }
 
+.navbar .nav-link:hover {
+    color: #5a3d2e !important;
+}
+
+.navbar .nav-item.active .nav-link {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.navbar .dropdown-menu {
+    background-color: #faeadc !important;
+    border: none;
+}
+
+.navbar .dropdown-item {
+    color: #000 !important;
+    font-family: 'Libertinus Sans', sans-serif;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #5a3d2e !important;
+    color: #faeadc !important;
+}
+
+.navbar .form-control {
+    border: 2px solid #000;
+    background-color: #faeadc;
+    color: #000;
+}
+
+.navbar .btn-outline-success {
+    border: 2px solid #000;
+    color: #000;
+}
+
+.navbar .btn-outline-success:hover {
+    background-color: #5a3d2e;
+    color: #faeadc;
+}
+
+/* TEXTOS  */
 h2 {
     font-family: 'Serifadas Elegantes', serif;
     font-size: 2.5rem;
     color: #000;
+    text-align: center;
 }
 
 h4 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Great Vibes', cursive;
     font-size: 2rem;
-    color: #3a3737;
+    color: #5a3d2e;
     text-align: center;
     margin: 1.5rem 0;
 }
@@ -54,75 +93,90 @@ p {
     color: #000;
 }
 
+
 main {
     padding: 2rem;
+    background-color: #faeadc;
 }
 
-.book-list, .revew {
-    margin-bottom: 2rem;
-    border: 1px solid hsl(0, 27%, 98%);
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: hsl(0, 27%, 98%);
+/* TERMOS LITERÁRIOS */
+.literary-terms {
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.book-list img, .revew img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.book-list p, .revew p {
-    margin: 0.5rem 0;
+.literary-terms h1 {
+    text-align: center;
     color: #333;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
 }
 
-.book-list a, .revew a {
-    color: #007bff;
-    text-decoration: none;
+/* Oculta os checkboxes */
+.term input[type="checkbox"] {
+    display: none;
 }
 
-.book-list a:hover, .revew a:hover {
-    text-decoration: underline;
+/* O label será o título clicável */
+.term label {
+    display: block;
+    cursor: pointer;
+    border-left: 5px solid #6c4e3e;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 40px;
+    color: #6c4e3e;
+    font-family: "Jim Nightshade", cursive;
+    user-select: none;
+    transition: background-color 0.3s ease;
 }
 
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+.term label:hover {
+    background-color: #e0bfa2;
 }
 
-.cta-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-    font-family: '';
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-.carousel {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+/* Parágrafo escondido inicialmente */
+.term p {
+    max-height: 0;
     overflow: hidden;
+    font-size: 1.7rem;
+    color: #444;
+    font-family: "Bellefair", serif;
+    margin: 0 0 20px 20px;
+    transition: max-height 0.35s ease;
+    line-height: 1.5;
 }
 
-.carousel img {
-    max-width: 200px;
-    border-radius: 8px;
+/* Quando o checkbox está marcado, mostra o texto */
+.term input[type="checkbox"]:checked ~ p {
+    max-height: 1000px; /* alto o suficiente pra caber o texto */
 }
 
+.quiz p {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family:"Bellefair", serif; ;
+  text-align: center;
+  
+}
+
+.quiz h4 {
+  font-family: 'Great Vibes', cursive; /* fonte cursiva para destacar */
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #6c4e3e;
+}
+
+/*  FOOTER */
 footer {
-    background-color: #f1f1f1;
+    background-color: #faeadc;
     text-align: center;
     padding: 1rem;
     position: relative;
@@ -142,8 +196,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* RESPONSIVO  */
 @media (max-width: 768px) {
-    header nav ul li {
+    .navbar-nav .nav-item {
         display: block;
         margin: 0.5rem 0;
     }
@@ -152,42 +207,7 @@ footer a:hover {
         padding: 1rem;
     }
 
-    .book-list, .revew {
+    .book-list, .review {
         padding: 0.5rem;
     }
-}
-nav.navbar {
-    background-color: #0080ff; /* Cor de fundo personalizada, você pode trocar por qualquer cor */
-    font-family: ''; /* Exemplo de fonte personalizada, você pode usar a que desejar */
-}
-
-/* Personalizando o estilo das opções do menu */
-nav.navbar .nav-link {
-    color: #000000 !important; /* Cor do texto no menu */
-    font-family: ''; /* Outra fonte personalizada para o texto do menu */
-}
-
-/* Mudando a cor ao passar o mouse */
-nav.navbar .nav-link:hover {
-    color: #000000 !important; /* Cor ao passar o mouse (exemplo: laranja) */
-}
-
-/* Mudando a cor do item ativo */
-nav.navbar .nav-item.active .nav-link {
-    color: #000000 !important; /* Cor para o item ativo */
-}
-
-/* Estilo da barra de pesquisa */
-nav.navbar .form-control {
-    border: 2px solid #000000; /* Cor personalizada para o campo de pesquisa */
-}
-
-nav.navbar .btn-outline-success {
-    border: 2px solid #000000; /* Borda do botão */
-    color: #000000; /* Cor do texto do botão */
-}
-
-nav.navbar .btn-outline-success:hover {
-    background-color: #ff6347;
-    color: rgb(0, 0, 0);
 }
