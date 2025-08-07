@@ -1,0 +1,179 @@
+/* Reset CSS básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f5f1e9; /* fundo creme claro */
+    color: #4b3b2b; /* marrom escuro */
+    font-family: 'Georgia', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove outline azul padrão no foco */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #fff8f0; /* tom mais claro que o fundo */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(75, 59, 43, 0.2);
+    border: 1px solid #d9cfc1;
+}
+
+/* Títulos */
+h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #6b4c27; /* marrom quente */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #6b4c27;
+    border-bottom: 2px solid #a67c2a;
+    padding-bottom: 0.3rem;
+}
+
+/* Texto secundário */
+.text-muted {
+    color: #7a5f23 !important; /* dourado escuro */
+}
+
+/* Cartões */
+.card {
+    background-color: #fef9f0; /* tom papel claro */
+    color: #4b3b2b;
+    border: 1px solid #c9b486;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #f5e7ce;
+    font-weight: bold;
+    color: #6b4c27;
+    border-bottom: 1px solid #c9b486;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* Botão personalizado */
+a.btn-outline-primary,
+a.btn-outline-primary:focus,
+a.btn-outline-primary:active,
+a.btn-outline-primary:hover {
+    color: #a67c2a;
+    border: 2px solid #a67c2a;
+    background-color: transparent;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(166, 124, 42, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+a.btn-outline-primary:hover,
+a.btn-outline-primary:focus,
+a.btn-outline-primary:active {
+    background-color: #a67c2a;
+    color: #fff8e1;
+    border-color: #d9b84f;
+    box-shadow: 0 0 10px rgba(217, 184, 79, 0.5);
+}
+
+/* Imagens com borda */
+img.rounded-circle {
+    border: 3px solid #d6c5a5;
+    box-shadow: 0 0 8px rgba(166, 124, 42, 0.4);
+}
+
+/* Tooltip real */
+.username-tooltip {
+    position: relative;
+    cursor: default;
+    display: inline-block;
+    background: none;
+    color: inherit;
+    transition: none;
+}
+
+.username-tooltip::after {
+    content: attr(data-username);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background-color: rgba(75, 59, 43, 0.9);
+    color: #fef9f0;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+
+.username-tooltip:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.custom-tooltip {
+    position: absolute;
+    background-color: rgba(75, 59, 43, 0.9);
+    color: #fff8e1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    display: block;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.custom-tooltip.visible {
+    opacity: 1;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: default;
+}
+
+.foto-perfil:hover {
+    border-color: rgba(166, 124, 42, 0.3); /* leve dourado no hover */
+}
+

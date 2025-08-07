@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f1e9; /* tom creme claro */
+    color: #4b3b2b; /* marrom escuro */
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+/* Container centralizado com sombra e borda */
+.container {
+    max-width: 600px;
+    background-color: #fff8f0; /* tom mais claro que o fundo */
+    padding: 2.5rem 3rem;
+    margin: auto;
+    border: 1px solid #d9cfc1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(75, 59, 43, 0.2);
+}
+
+/* Título com fonte clássica e cor forte */
+h2 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #6b4c27; /* marrom quente */
+    border-bottom: 2px solid #a67c2a;
+    padding-bottom: 0.5rem;
+}
+
+/* Alerta de mensagem */
+.alert-info {
+    background-color: #f0e7d9;
+    border: 1px solid #c9b486;
+    color: #7a5f23;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+/* Preview da imagem de perfil - borda em tom de madeira, com leve sombra */
+.preview-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #a67c2a; /* tom madeira/dourado */
+    box-shadow: 0 0 8px rgba(166, 124, 42, 0.3);
+    display: block;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.preview-img:hover {
+    border-color: #d9b84f; /* tom dourado claro */
+    box-shadow: 0 0 12px rgba(217, 184, 79, 0.4);
+}
+
+/* Labels */
+.form-label {
+    font-weight: 600;
+    color: #6b4c27;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+/* Inputs e textarea estilo papel envelhecido */
+input[type="file"].form-control,
+textarea.form-control {
+    background-color: #fef9f0;
+    color: #4b3b2b;
+    border: 1px solid #c9b486;
+    border-radius: 6px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"].form-control:focus,
+textarea.form-control:focus {
+    border-color: #a67c2a;
+    outline: none;
+    background-color: #fffdf5;
+}
+
+/* Botões com tema clássico */
+.btn-primary {
+    background-color: #a67c2a;
+    border-color: #a67c2a;
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #d9b84f;
+    border-color: #d9b84f;
+    outline: none;
+    color: #4b3b2b;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #a67c2a;
+    color: #a67c2a;
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #a67c2a;
+    color: #fff8e1;
+    border-color: #a67c2a;
+    outline: none;
+}
+
+/* Espaçamento extra entre botões */
+.ms-2 {
+    margin-left: 0.5rem !important;
+}
+
+/* Scrollbar customizada para textarea (opcional) */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+textarea.form-control::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea.form-control::-webkit-scrollbar-track {
+    background: #fef9f0;
+}
+
+textarea.form-control::-webkit-scrollbar-thumb {
+    background-color: #a67c2a;
+    border-radius: 10px;
+}
+
+/* Responsividade simples */
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem 1.5rem;
+        margin: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .preview-img {
+        width: 100px;
+        height: 100px;
+    }
+}

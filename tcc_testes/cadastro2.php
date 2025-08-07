@@ -43,18 +43,25 @@ if (isset($_SESSION['msg'])) {
                         for="name" 
                         class="form-label"
                     >
-                        Primeiro nome
+                        Nome de usuário
                     </label>
                     <div class="input-field">
                         <input 
                             type="text"
-                            name="name"
-                            id="name"
+                            name="name_user"
+                            id="name_user"
                             class="form-control"
-                            placeholder="Digite seu primeiro nome"
+                            placeholder="Digite seu Nome de usuário"
                         required>
                         <i class="fa-regular fa-user"></i>
                     </div>
+                        <?php
+                        // mensagem embaixo do campo
+                        if (isset($_SESSION['erro_nome_usuario'])) {
+                        echo '<div class="erro"><span class="erro-icon">!</span>' . htmlspecialchars($_SESSION['erro_nome_usuario']) . '</div>';
+                        unset($_SESSION['erro_nome_usuario']);
+                        }
+                    ?>
                 </div>
 
                 <div class="input-box">
@@ -62,15 +69,15 @@ if (isset($_SESSION['msg'])) {
                         for="last_name" 
                         class="form-label"
                     >
-                       Sobrenome
+                       Nome de Exibição
                     </label>
                     <div class="input-field">
                         <input 
                             type="text"
-                            name="last_name"
-                            id="last_name"
+                            name="name_exibir"
+                            id="name_exibir"
                             class="form-control"
-                            placeholder="Digite seu sobrenome"
+                            placeholder="Digite seu Nome de Exibição"
                         required>
                         <i class="fa-regular fa-user"></i>
                     </div>
@@ -110,6 +117,13 @@ if (isset($_SESSION['msg'])) {
                         required>
                         <i class="fa-regular fa-envelope"></i>
                     </div>
+                        <?php
+                        // mensagem embaixo do campo
+                        if (isset($_SESSION['erro_email'])) {
+                        echo '<div class="erro"><span class="erro-icon">!</span>' . htmlspecialchars($_SESSION['erro_email']) . '</div>';
+                        unset($_SESSION['erro_email']);
+                        }
+                    ?>
                 </div>
 
                 <div class="input-box">
@@ -150,6 +164,12 @@ if (isset($_SESSION['msg'])) {
                         required>
                         <i class="fa-regular fa-eye-slash password-icon"></i>
                     </div>
+                    <?php
+                        if (isset($_SESSION['erro_confirm_password'])) {
+                            echo '<div class="erro"><span class="erro-icon">!</span>' . htmlspecialchars($_SESSION['erro_confirm_password']) . '</div>';
+                            unset($_SESSION['erro_confirm_password']);
+                        }
+                    ?>
                 </div>
 
                 <div class="radio-container">
