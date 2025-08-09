@@ -21,68 +21,37 @@
 
             <ul class="itens">
 <li class="item">
-  <div class="item-imagem">
-    <img src="scr/image/como eu.jpg" alt="Como eu era">
-  </div>
-  <div class="item-content">
-    <h2 class="item-title">Como eu Era</h2>
-    <p class="item-subtitle">
-      <i class="fa fa-book" aria-hidden="true"></i>
-      Livro de Romance
-    </p>
-    <p class="item-description">
-      Conta a história de Louisa...
-    </p>
-  </div>
+          <div class="item-imagem">
+            <img src="scr/image/como eu.jpg" alt="Como eu era">
+          </div>
+          <div class="item-content">
+            <h2 class="item-title">Como eu Era</h2>
+                <p class="item-subtitle">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                        Livro de Romance
+                </p>
+                <p class="item-description">
+                      Conta a história de Louisa...
+                </p>
+          </div>
 </li>
 
 <li class="item">
-  <div class="item-imagem">
-    <img src="scr/image/como eu.jpg" alt="Como eu era">
-  </div>
-  <div class="item-content">
-    <h2 class="item-title">Como eu Era</h2>
-    <p class="item-subtitle">
-      <i class="fa fa-book" aria-hidden="true"></i>
-      Livro de Romance
-    </p>
-    <p class="item-description">
-      Conta a história de Louisa...
-    </p>
-  </div>
+          <div class="item-imagem">
+            <img src="scr/image/como eu.jpg" alt="Como eu era">
+          </div>
+          <div class="item-content">
+            <h2 class="item-title">Como eu Era</h2>
+                <p class="item-subtitle">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                        Livro de Romance
+                </p>
+                <p class="item-description">
+                      Conta a história de Louisa...
+                </p>
+          </div>
 </li>
 
-<li class="item">
-  <div class="item-imagem">
-    <img src="scr/image/como eu.jpg" alt="Como eu era">
-  </div>
-  <div class="item-content">
-    <h2 class="item-title">Como eu Era</h2>
-    <p class="item-subtitle">
-      <i class="fa fa-book" aria-hidden="true"></i>
-      Livro de Romance
-    </p>
-    <p class="item-description">
-      Conta a história de Louisa...
-    </p>
-  </div>
-</li>
-
-<li class="item">
-  <div class="item-imagem">
-    <img src="scr/image/como eu.jpg" alt="Como eu era">
-  </div>
-  <div class="item-content">
-    <h2 class="item-title">Como eu Era Hilda</h2>
-    <p class="item-subtitle">
-      <i class="fa fa-book" aria-hidden="true"></i>
-      Livro de Romance
-    </p>
-    <p class="item-description">
-      Conta a história de hilda...
-    </p>
-  </div>
-      </li>
 
             <li id="no_results">
                 <p>Nenhum resultado encontrado</p>
