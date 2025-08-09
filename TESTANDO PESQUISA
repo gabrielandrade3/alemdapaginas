@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="scr/css/pesquisa.css">
+    <title>Pesquisa</title>
+</head>
+<body>
+    <div id="container">
+        <div class="input-group">
+            <div class="input-icon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <input id="search"
+             type="text" 
+             class="input-field" 
+            placeholder="Pesquisar">
+        </div>
+
+            <ul class="itens">
+<li class="item">
+  <div class="item-imagem">
+    <img src="scr/image/como eu.jpg" alt="Como eu era">
+  </div>
+  <div class="item-content">
+    <h2 class="item-title">Como eu Era</h2>
+    <p class="item-subtitle">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      Livro de Romance
+    </p>
+    <p class="item-description">
+      Conta a história de Louisa...
+    </p>
+  </div>
+</li>
+
+<li class="item">
+  <div class="item-imagem">
+    <img src="scr/image/como eu.jpg" alt="Como eu era">
+  </div>
+  <div class="item-content">
+    <h2 class="item-title">Como eu Era</h2>
+    <p class="item-subtitle">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      Livro de Romance
+    </p>
+    <p class="item-description">
+      Conta a história de Louisa...
+    </p>
+  </div>
+</li>
+
+<li class="item">
+  <div class="item-imagem">
+    <img src="scr/image/como eu.jpg" alt="Como eu era">
+  </div>
+  <div class="item-content">
+    <h2 class="item-title">Como eu Era</h2>
+    <p class="item-subtitle">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      Livro de Romance
+    </p>
+    <p class="item-description">
+      Conta a história de Louisa...
+    </p>
+  </div>
+</li>
+
+<li class="item">
+  <div class="item-imagem">
+    <img src="scr/image/como eu.jpg" alt="Como eu era">
+  </div>
+  <div class="item-content">
+    <h2 class="item-title">Como eu Era Hilda</h2>
+    <p class="item-subtitle">
+      <i class="fa fa-book" aria-hidden="true"></i>
+      Livro de Romance
+    </p>
+    <p class="item-description">
+      Conta a história de hilda...
+    </p>
+  </div>
+      </li>
+
+            <li id="no_results">
+                <p>Nenhum resultado encontrado</p>
+            </li>
+
+</ul>
+
+    </div>
+    <script src="scr/javascript/script.js"></script>
+</body>
+</html>
+
+
+\\ CSS
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faeadc;
+
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    background-color: #faeadc;
+    padding: 8px 16px 8px 8px;
+    border-radius: 24px;
+    gap: 8px;
+
+}
+
+.input-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: #faeadc;
+    color: tan;
+
+}
+
+.input-field{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.itens {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin-top: 24px;
+    background-color: #f5dbc4;
+    border-radius: 24px;
+    padding: 24px;
+    width: 750px; /* MAIS LARGO */
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.item-imagem img {
+    width: 117px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.item-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    background-color: transparent;
+}
+
+.item-subtitle {
+    font-size: 12px;
+    color: #3a210f;
+}
+
+.item-description {
+    font-size: 14px;
+    color: #3a210f;
+}
+
+#no_results{
+    text-align: center;
+    display: none;
+}
+
+
+\\ JAVA SCRIPT
+
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener('input', (event) => {
+    const value = formatString(event.target.value);
+
+    const itens = document.querySelectorAll('.itens .item');
+    const noResults = document.getElementById('no_results');
+
+    let hasResults = false;
+
+    if (value !== '') {
+        itens.forEach(item => {
+            const itemTitle = item.querySelector('.item-title').textContent;
+            if (formatString(itemTitle).indexOf(value) !== -1) {
+                item.style.display = 'flex';
+                hasResults = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (hasResults) {
+            noResults.style.display = 'none';
+        } else {
+            noResults.style.display = 'block';
+        }
+    } else {
+        itens.forEach(item => item.style.display = 'flex');
+        noResults.style.display = 'none';
+    }
+});
+
+function formatString(value) {
+    return value
+        .normalize("NFD") // separa acentos das letras
+        .replace(/[\u0300-\u036f]/g, "") // remove acentos
+        .toLowerCase()
+        .trim();
+}
+
+
+
+ESTA SENDO TESTADO, NAO MEXA. 
