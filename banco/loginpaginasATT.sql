@@ -22,8 +22,8 @@ CREATE TABLE livros (
     titulo VARCHAR(200),
     autor VARCHAR(150),
     descricao TEXT,
-    capa_url LONGBLOB,
-    arquivo_url LONGBLOB,
+    capa_url VARCHAR(255),
+    arquivo_url VARCHAR(255),
     data_publicacao DATE,
     genero_id INT,
     FOREIGN KEY (genero_id) REFERENCES generos(id)
@@ -54,11 +54,6 @@ INSERT INTO generos (nome) VALUES
 // já adicionado na propria tabela
 ALTER TABLE usuarios ADD UNIQUE (email);
 ALTER TABLE usuarios ADD UNIQUE (nome_usuario);
-
-
-// CAPA E PDF SALVOS Banco - teste
-ALTER TABLE livros MODIFY capa_url LONGBLOB;
-ALTER TABLE livros MODIFY arquivo_url LONGBLOB;
 
 //testes
 
