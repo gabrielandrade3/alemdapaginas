@@ -10,7 +10,10 @@ CREATE TABLE usuarios (
     nascimento DATE NOT NULL,
     genero ENUM('male', 'female', 'other') NOT NULL,
     foto_perfil LONGBLOB DEFAULT NULL,
-    bio VARCHAR(255) DEFAULT NULL
+    bio VARCHAR(255) DEFAULT NULL,
+    notif_seguidores BOOLEAN DEFAULT TRUE,
+	notif_curtidas BOOLEAN DEFAULT TRUE,
+	notif_comentarios BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE generos (
@@ -52,8 +55,19 @@ INSERT INTO generos (nome) VALUES
 //executar daqui pra cima
 
 // já adicionado na propria tabela
+
+ALTER TABLE usuarios 
+ADD notif_seguidores BOOLEAN DEFAULT TRUE,
+ADD notif_curtidas BOOLEAN DEFAULT TRUE,
+ADD notif_comentarios BOOLEAN DEFAULT TRUE;
+
 ALTER TABLE usuarios ADD UNIQUE (email);
 ALTER TABLE usuarios ADD UNIQUE (nome_usuario);
+
+
+// CAPA E PDF SALVOS Banco - teste
+ALTER TABLE livros MODIFY capa_url VARCHAR(255);
+ALTER TABLE livros MODIFY arquivo_url VARCHAR(255);
 
 //testes
 
@@ -73,6 +87,3 @@ MODIFY COLUMN foto_perfil LONGBLOB;
 
 
 ALTER TABLE usuarios ADD COLUMN bio TEXT DEFAULT NULL;
-
-
-
