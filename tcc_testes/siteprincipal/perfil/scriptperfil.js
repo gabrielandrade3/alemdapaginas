@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     const tooltipTarget = document.querySelector('.username-tooltip');
 
+    let tooltip = document.querySelector('.custom-tooltip');
+    if (!tooltip) {
+        tooltip = document.createElement('div');
+        tooltip.classList.add('custom-tooltip');
+        document.body.appendChild(tooltip);
+    }
+
+
     if (tooltipTarget) {
         const tooltip = document.createElement('div');
         tooltip.classList.add('custom-tooltip');
         tooltip.innerText = tooltipTarget.getAttribute('data-username');
         document.body.appendChild(tooltip);
+
+        
 
         function positionTooltip() {
             const rect = tooltipTarget.getBoundingClientRect();

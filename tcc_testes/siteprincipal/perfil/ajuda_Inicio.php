@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="ajudaInicio.css">
 </head>
 <body>
+    <button id="btn-voltar" type="button">← Voltar ao Site Principal</button>
     <div class="main-container">
         <header class="top-header">
             <h1>Central de Ajuda</h1>
@@ -70,7 +71,7 @@ session_start();
                 <div class="faq-answer">
                     <p>As resenhas estão disponíveis em vários lugares:</p>
                     <ol>
-                        <li>Na <strong>página de cada livro</strong>, abaixo das informações básicas</li>
+                        <li>Na <strong>página de cada livro</strong>, abaixo da sinopse</li>
                         <li>No <strong>perfil dos usuários</strong>, na seção "Resenhas"</li>
                         <li>Na página <strong>"Resenhas"</strong> no menu principal</li>
                     </ol>
@@ -94,7 +95,7 @@ session_start();
                     </ul>
                     <p>Para criar uma lista:</p>
                     <ol>
-                        <li>Vá até "Minhas Listas" no seu perfil</li>
+                        <li>Vá até "Minhas Listas" ao clicar na foto de seu perfil</li>
                         <li>Clique em "Criar nova lista"</li>
                         <li>Adicione um título, descrição e livros que deseja ler, ou que tem interesse e etc</li>
                         <li>Escolha se será pública ou privada</li>
@@ -105,7 +106,7 @@ session_start();
             <section class="faq-item" id="faq5">
                 <button class="faq-question">
                     <i class="fas fa-bell"></i>
-                    Como receber notificações tanto seja de curtidas, seguidores novos e livros novos?
+                    Como receber notificações tanto seja de curtidas, seguidores e comentários novos?
                     <span class="icon"><i class="fas fa-chevron-down"></i></span>
                 </button>
                 <div class="faq-answer">
@@ -115,12 +116,10 @@ session_start();
                         <li>Marque as opções desejadas:
                             <ul>
                                 <li>Novos seguidores</li>
-                                <li>Curtidas em suas resenhas</li>
-                                <li>Curiosidades de livros curtidos ou do gênero de interesse</li>
-                                <li>Atividades de usuários que você segue</li>
+                                <li>Curtidas nas Resenhas</li>
+                                <li>Novos comentários</li>
                             </ul>
                         </li>
-                        <li>Escolha receber por e-mail ou apenas no site</li>
                         <li>Salve suas preferências</li>
                     </ol>
                     <p><i class="fas fa-envelope"></i> Você pode ajustar a frequência das notificações.</p>
@@ -129,7 +128,7 @@ session_start();
 
             <section class="contact-section">
                 <h2>Não encontrou o que precisava?</h2>
-                <p class="contact-info">Entre em contato conosco: <a href="mailto:suporteDasPaginas@gmail.com">suporteDasPaginas@gmail.co</a></p>
+                <p class="contact-info">Entre em contato conosco: <a href="mailto:suporteDasPaginas@gmail.com">SuporteDasPaginas@gmail.co</a></p>
             </section>
         </main>
 
@@ -141,6 +140,12 @@ session_start();
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const questions = document.querySelectorAll('.faq-question');
+            const btnVoltar = document.getElementById("btn-voltar");
+            if (btnVoltar) {
+            btnVoltar.addEventListener("click", () => {
+            window.location.href = "../site_livros.php";
+            });
+            }
             
             questions.forEach(question => {
                 question.addEventListener('click', function() {

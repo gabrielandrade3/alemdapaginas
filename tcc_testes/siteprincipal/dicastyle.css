@@ -37,7 +37,7 @@ h6{
 
 /* Estilo básico do slider */
 .slider {
-    width: 100%;
+    width: 75%;
     max-width: 600px;
     margin: auto;
     overflow: hidden;
@@ -55,7 +55,7 @@ h6{
   }
   
   .slide-box img {
-    width: 100%;
+    width: 75%;
     height: auto;
     display: block;
   }

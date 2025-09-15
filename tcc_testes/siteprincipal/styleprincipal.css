@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
 body {
     font-family: 'Great Vibes', cursive;
     line-height: 1.6;
@@ -16,19 +17,30 @@ header {
 }
 
 header h1 {
-    font-size: 80px;
-    font-family: 'Great Vibes', cursive;
+    font-size: 130px;
+     font-family: "Chau Philomene One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #8e572a;
 }
 
 /*  NAVBAR (BOOTSTRAP)  */
 .bg-body-tertiary {
-    background-color: #816a5c !important;
+    background-color: #5c3a27 !important;
+}
+
+.navbar-brand{
+     font-family: "Poppins", sans-serif;
+     color: #ffe3ce;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbar .nav-link {
-    color: #000 !important;
-    font-family: 'Libertinus Sans', sans-serif;
-    text-decoration: none;
+    color: #ffe3ce !important;
+ font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbar .nav-link:hover {
@@ -41,8 +53,9 @@ header h1 {
 }
 
 .navbar .dropdown-menu {
-    background-color: #f8eddd !important;
-    border: none;
+     font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbar .dropdown-item {
@@ -56,14 +69,19 @@ header h1 {
 }
 
 .navbar .form-control {
-    border: 2px solid #000;
-    background-color: #faeadc;
-    color: #000;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    border: 2px solid #faeadc;
 }
 
 .navbar .btn-outline-success {
-    border: 2px solid #000;
-    color: #000;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+   color: #faeadc !important;
+    border: 2px solid #faeadc;
+    
 }
 
 .navbar .btn-outline-success:hover {
@@ -73,10 +91,13 @@ header h1 {
 
 /* TEXTOS  */
 h2 {
-    font-family: 'Serifadas Elegantes', serif;
-    font-size: 2.5rem;
-    color: #000;
-    text-align: center;
+         font-size: 45px;
+    font-family: "Chau Philomene One", sans-serif;
+  font-weight: 400;
+   text-align: center;
+  font-style: normal;
+    color: #a46c35;
+
 }
 
 h4 {
@@ -88,9 +109,11 @@ h4 {
 }
 
 p {
-    font-family: 'Serifadas Elegantes', serif;
-    font-size: 1.5rem;
-    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+    color: #644125;
 }
 
 
@@ -110,10 +133,12 @@ main {
 }
 
 .literary-terms h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-family: 'Dancing Script', cursive;
+     font-family: "Miniver", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+   color: #664625;
+  font-style: normal;
 }
 
 /* Oculta os checkboxes */
@@ -326,7 +351,7 @@ footer a:hover {
     border: 2px solid #fff;   /* Borda branca (opcional) */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
     background-color: rgba(255, 255, 255, 0.4); /* Fundo translúcido */
-    backdrop-filter: blur(2px); /* Leve desfoque atrás da imagem */
+    backdrop-filter: blur(2px); /* Leve desfoque atrás da imagem */ 
 }
 
 

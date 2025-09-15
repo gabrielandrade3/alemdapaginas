@@ -6,10 +6,25 @@ include('conexaobanco.php');
 if (isset($_GET['id'])) {
     $id_livro = $_GET['id'];
 
-    // Consulta SQL para excluir o livro
-    $sql = "DELETE FROM livros WHERE id_livro = ?";
+    // 1. Verifica se existem resenhas ligadas a esse livro
+    $sql_check = "SELECT COUNT(*) FROM resenhas WHERE livro_id = ?";
+    if ($stmt_check = $conn->prepare($sql_check)) {
+        $stmt_check->bind_param("i", $id_livro);
+        $stmt_check->execute();
+        $stmt_check->bind_result($qtd_resenhas);
+        $stmt_check->fetch();
+        $stmt_check->close();
 
-    // Prepara e executa a consulta
+        if ($qtd_resenhas > 0) {
+            // Se houver resenhas, exibe mensagem e não deleta
+            echo "Não é possível excluir: tem resenhas com esse livro.";
+            $conn->close();
+            exit;
+        }
+    }
+
+    // 2. Se não tem resenhas, pode excluir o livro
+    $sql = "DELETE FROM livros WHERE id_livro = ?";
     if ($stmt = $conn->prepare($sql)) {
         $stmt->bind_param("i", $id_livro);
         $stmt->execute();
@@ -21,6 +36,7 @@ if (isset($_GET['id'])) {
         } else {
             echo "Erro ao excluir o livro ou livro não encontrado.";
         }
+        $stmt->close();
     }
 }
 

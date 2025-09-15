@@ -38,7 +38,6 @@ body {
     border: 1px solid #badbcc;
 }
 
-
 .btn-default {
     background-color: #A0522D;
     color: white;
@@ -62,7 +61,6 @@ body {
     background-color:  #A0522D;
 }
 
-
 .btn-default-exit {
     background-color: #A0522D;
     display: flex;
@@ -81,7 +79,6 @@ body {
     transition: 0.3s ease;
 }
 
-
 #form_container {
     display: flex;
     flex-direction: column;
@@ -90,8 +87,12 @@ body {
     background-color: #f6f8ff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);    
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    max-width: 700px; /* largura máxima */
+    width: 90%;       /* ocupa 90% da tela em telas menores */
 }
+
 
 #form_header {
     display: flex;
@@ -127,6 +128,10 @@ body {
 #input_container {
     display: grid;
     gap: 24px;
+}
+
+.input-box {
+    position: relative; /* Necessário para posicionamento da mensagem de erro */
 }
 
 .form-label {
@@ -168,7 +173,7 @@ body {
 }
 
 .input-box .input-field:focus-within {
-    outline: 2px solid  #A0522D;
+    outline: 2px solid #A0522D;
 }
 
 input:-webkit-autofill {
@@ -192,7 +197,7 @@ input:-webkit-autofill {
 }
 
 .form-control[type="radio"] {
-    accent-color:  #A0522D;
+    accent-color: #A0522D;
 }
 
 @media screen and (max-width: 500px) {
@@ -211,4 +216,28 @@ input:-webkit-autofill {
     .form-control[type="date"] {
         background-color: #fff;
     }
+}
+
+.erro {
+    margin-top: 4px;
+    color: red;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.erro-icon {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
 }

@@ -181,3 +181,21 @@
                 font-size: 0.9rem;
             }
         }
+        #btn-voltar {
+        background-color: #6b4c27;
+        color: #fff8f0;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+        font-family: 'Georgia', serif;
+        font-weight: 600;
+        }
+
+        #btn-voltar:hover {
+        background-color: #4b3b2b;
+        transform: translateY(-2px);
+        }

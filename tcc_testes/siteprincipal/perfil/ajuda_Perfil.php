@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="ajudaPerfil.css">
 </head>
 <body>
+    <button id="btn-voltar" type="button">← Voltar ao Site Principal</button>
     <div class="main-container">
         <header class="top-header">
             <h1>Central de Ajuda</h1>
@@ -37,8 +38,8 @@ session_start();
                     <p>Para alterar sua foto de perfil:</p>
                     <ol>
                         <li>Acesse seu perfil clicando em sua foto no canto superior direito</li>
-                        <li>Selecione "Editar Perfil"</li>
-                        <li>"Editar Perfil" novamente ao lado de seu nome</li>
+                        <li>Selecione "Perfil"</li>
+                        <li>Clique em "Editar Perfil" ao lado de seu nome</li>
                         <li>Selecione uma nova imagem do seu dispositivo</li>
                         <li>Clique em "Salvar Alterações"</li>
                     </ol>
@@ -55,8 +56,8 @@ session_start();
                 <div class="faq-answer">
                     <p>Sim, você pode alterar seu nome de exibição a qualquer momento:</p>
                     <ol>
-                        <li>Vá até "Editar Perfil"</li>
-                        <li>Atualize o campo "Nome de Exibição"</li>
+                        <li>Vá até "Configurações"</li>
+                        <li>Em "Dados e Privacidade" atualize o campo "Nome de Exibição"</li>
                         <li>Clique em "Salvar Alterações"</li>
                     </ol>
                     <p><i class="fas fa-info-circle"></i> Observação: Seu nome de exibição será visível publicamente.</p>
@@ -74,7 +75,7 @@ session_start();
                         <li><strong>Público:</strong> Nome de exibição e foto de perfil</li>
                         <li><strong>Privado:</strong> E-mail e informações de conta</li>
                     </ul>
-                    <p>Você pode personalizar essas configurações em "Configurações" > "Privacidade".</p>
+                    <p>Você pode personalizar essas configurações em "Configurações" > "Dados e Privacidade".</p>
                 </div>
             </section>
 
@@ -87,10 +88,12 @@ session_start();
                 <div class="faq-answer">
                     <p>Para excluir sua conta:</p>
                     <ol>
-                        <li>Acesse "Configurações da Conta"</li>
-                        <li>Role até a seção "Excluir Conta"</li>
+                        <li>Acesse "Configurações"</li>
+                        <li>Em "Acesso e Segurança" clique em "Excluir Conta"</li>
                         <li>Digite sua senha para confirmar</li>
-                        <li>Clique em "Excluir Conta Permanentemente"</li>
+                        <li> <p>Clique em "Excluir Conta Permanentemente" - Caso queira excluir definitivamente sua conta (Dados e etc..) </p> 
+                            <p>Clique em "Desativar Conta" - Caso queira apenas deixar sua conta "ausente" e não exclua totalmente os dados</p>    
+                        </li>
                     </ol>
                     <p><i class="fas fa-exclamation-triangle"></i> Atenção: Esta ação é irreversível.</p>
                 </div>
@@ -98,7 +101,7 @@ session_start();
 
             <section class="contact-section">
                 <h2>Precisa de mais ajuda?</h2>
-                <p class="contact-info">Entre em contato conosco pelo e-mail: <a href="mailto:suporteDasPaginas@gmail.com">suporteDasPaginas@gmail.com</a></p>
+                <p class="contact-info">Entre em contato conosco pelo e-mail: <a href="mailto:suporteDasPaginas@gmail.com">SuporteDasPaginas@gmail.com</a></p>
             </section>
         </main>
 
@@ -110,6 +113,12 @@ session_start();
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const questions = document.querySelectorAll('.faq-question');
+                const btnVoltar = document.getElementById("btn-voltar");
+            if (btnVoltar) {
+             btnVoltar.addEventListener("click", () => {
+            window.location.href = "../site_livros.php";
+            });
+            }
             
             questions.forEach(question => {
                 question.addEventListener('click', function() {

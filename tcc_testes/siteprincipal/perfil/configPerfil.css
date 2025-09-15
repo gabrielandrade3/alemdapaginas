@@ -1,0 +1,306 @@
+/* --------------------
+   Layout base
+----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #f5f1e9;
+    color: #4b3b2b;
+    padding: 2rem;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #6b4c27;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: 700;
+    border-bottom: 1px solid #d9cfc1;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    color: #6b4c27;
+    font-weight: 600;
+}
+
+/* --------------------
+   Estrutura
+----------------------- */
+.config-container {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff8f0;
+    padding: 2rem;
+    border: 1px solid #d9cfc1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(75, 59, 43, 0.1);
+}
+
+.config-menu {
+    width: 220px;
+    background: #f0e7d9;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid #c9b486;
+}
+
+/* --------------------
+   Botões do menu lateral
+----------------------- */
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #a67c2a;
+    border: none;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff8f0;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background: #8a6924;
+    transform: translateX(3px);
+}
+
+.tab-btn.active {
+    background: #6b4c27;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn i {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* --------------------
+   Conteúdo da aba
+----------------------- */
+.config-content {
+    flex: 1;
+    background: #fff8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(75, 59, 43, 0.05);
+    min-height: 500px;
+    animation: fadeIn 0.4s ease;
+    border: 1px solid #d9cfc1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.config-section {
+    display: none;
+}
+
+.config-section.active {
+    display: block;
+}
+
+/* --------------------
+   Formulários
+----------------------- */
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    color: #6b4c27;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #c9b486;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    background-color: #fff;
+    color: #4b3b2b;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #a67c2a;
+    box-shadow: 0 0 0 3px rgba(166, 124, 42, 0.2);
+    outline: none;
+}
+
+input[readonly] {
+    background-color: #f0e7d9;
+    cursor: not-allowed;
+}
+
+/* --------------------
+   Botões
+----------------------- */
+button {
+    background: #a67c2a;
+    color: #fff8f0;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #8a6924;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#btn-voltar {
+    background-color: #6b4c27;
+    color: #fff8f0;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    font-weight: 600;
+}
+
+#btn-voltar:hover {
+    background-color: #4b3b2b;
+    transform: translateY(-2px);
+}
+
+/* --------------------
+   Toasts (notificações)
+----------------------- */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #6b4c27;
+    color: #fff8f0;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    font-size: 1rem;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(75, 59, 43, 0.3);
+    font-family: 'Georgia', serif;
+    max-width: 350px;
+}
+
+.toast.sucesso {
+    background: #5a7d5a;
+}
+
+.toast.erro {
+    background: #8c4a3c;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------
+   Scroll personalizado
+----------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c9b486;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a67c2a;
+}
+
+/* --------------------
+   Responsividade
+----------------------- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .config-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .config-menu {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1 1 120px;
+        justify-content: center;
+        text-align: center;
+        padding: 0.6rem;
+    }
+    
+    .tab-btn i {
+        margin-right: 0;
+    }
+    
+    .config-content {
+        padding: 1rem;
+    }
+}
+
+/* --------------------
+   Elementos adicionais
+----------------------- */
+.config-section h3 {
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #d9cfc1;
+}
+
+.config-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #4b3b2b;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}

@@ -24,6 +24,12 @@ if (isset($_SESSION['usuario_id'])) {
     <title>Além das Pág.</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styleprincipal.css">
@@ -85,11 +91,11 @@ if (isset($_SESSION['usuario_id'])) {
 
                                     <a href="../siteprincipal/perfil/view_Perfil.php" class="sub-menu-link">
                                     <i class="fas fa-user-circle"></i>
-                                    <p>Editar Perfil</p>
+                                    <p>Perfil</p>
                                     <span>›</span>
                                 </a>
 
-                                <a href="#" class="sub-menu-link">
+                                <a href="../siteprincipal/perfil/config_Perfil.php" class="sub-menu-link">
                                     <i class="fas fa-cog"></i>
                                     <p>Configurações</p>
                                     <span>›</span>
@@ -134,29 +140,12 @@ if (isset($_SESSION['usuario_id'])) {
 
     <main>
         <section>
-            <h2>📖 Bem-vindo ao seu novo refúgio literário</h2>
+            <h2>Bem-vindo ao seu novo refúgio literário</h2>
             <br>
             <p>Olá, leitoras e leitores.</p>
             <p>Você acaba de cruzar a fronteira entre o real e o imaginário. Este espaço não é apenas sobre livros — é sobre experiências. Aqui, as histórias não se leem apenas com os olhos, mas se vivem com a alma.
 
               Cada clique é um passo rumo ao seu próprio universo literário.</p>
-
-        <h4>Por aqui, você vai encontrar:</h4>
-
-<p>✨ Quiz criado para ajudar quem ainda não tem o hábito de ler a descobrir qual gênero literário combina mais com seu jeito — e, para quem já lê, uma chance de sair da zona de conforto e explorar novas possibilidades.</p>
-<p>✨ Curiosidades literárias com explicações simples sobre expressões comuns entre leitores.</p>
-<p>✨ Dicas de leitura para iniciantes ou curiosos que querem mergulhar nesse universo e não sabem por onde começar.</p>
-<p>✨ PDFs gratuitos de diversos gêneros — do romance ao suspense.</p>
-<p>✨ Resenhas literárias com linguagem acessível, para você entender a essência de cada livro antes de mergulhar na leitura.</p>
-<br>
-<p>Esse site é um convite para virar páginas, encontrar sentido — e também se perder nas entrelinhas.</p> 
-
-<p>Aqui, você vai sentir o cheiro das páginas, ouvir os sussurros dos personagens e caminhar ao lado deles em jornadas inesquecíveis.
-</p>
-<p>Ninguém precisa saber tudo sobre literatura. Basta ter curiosidade e vontade de explorar — o resto, a gente constrói junto.
-</p>
-<br>
-<p>📚 Entre, fique à vontade e comece a escrever sua própria jornada como leitor.</p>
         </section>
 
     <section class="literary-terms">
